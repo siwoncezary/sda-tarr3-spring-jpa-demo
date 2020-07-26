@@ -1,9 +1,12 @@
-<!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
     <title>Nauka HTML</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <meta name="description" content="Strona stworzona podczas nauki HTML, CSS i JavaScript w SDA kusrs Java">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,900;1,400&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
 <header>
@@ -13,11 +16,11 @@
 </header>
 <h1>Witaj na stronie o HTML</h1>
 <article>
-    <div>
+    <div class="bordered">
         <section>
             <h2>Przydatne linki z materiałami do nauki</h2>
             <ul>
-                <li>
+                <li class="bordered">
                     <a href="https://www.freecodecamp.org/">FreeCodeCamp</a>
                 </li>
                 <li>
@@ -32,10 +35,73 @@
     <div>
         <section>
             <h2>Roadmap front-endu</h2>
-            <p>Link do <span><b>strony</b></span>: <a href="https://github.com/kamranahmedse/developer-roadmap">Roadmap</a></p>
-            <img src="https://logos-download.com/wp-content/uploads/2016/10/Java_logo_icon.png" alt="Java logo" width="200px"/>
+            <p>Link do <span><b>strony</b></span>: <a
+                    href="https://github.com/kamranahmedse/developer-roadmap">Roadmap</a></p>
+            <img src="https://logos-download.com/wp-content/uploads/2016/10/Java_logo_icon.png" alt="Java logo"
+                 width="200px"/>
         </section>
     </div>
 </article>
+<article>
+    <table>
+        <thead>
+        <tr>
+            <th>
+                Lp.
+            </th>
+            <th>
+                Imię i nazwisko
+            </th>
+            <th>
+                Obecność w dniu: 2020-07-26
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1.</td>
+            <td>Karol Nowa</td>
+            <td>o</td>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>Anna Powiernik</td>
+            <td>o</td>
+        </tr>
+        <tr>
+            <td>3.</td>
+            <td>Robert Więcek</td>
+            <td>n</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="3">Lista obecności na zajęciach w SDA</td>
+        </tr>
+        </tfoot>
+    </table>
+</article>
+<article>
+    <h2>Klasa <em>String</em></h2>
+    <p>Klasa <em>String</em> służy do tworzenia
+        napisów
+        w kodzie
+        Javy. Posiada wiele metod do przetwarzania łańcuchów np.: <em>length</em>:
+    </p>
+    <p>
+        <samp>
+            <code>
+                String text = "Tekst;
+                int len = text.lenght();
+            </code>
+        </samp>
+    </p>
+    <p>Skrót wywołujący podpowiedzi w IntelliJ:
+        <kbn>CTRL+SPACJA</kbn>
+    </p>
+</article>
+<footer>
+    <i class="fab fa-github-square"></i>
+</footer>
 </body>
 </html>

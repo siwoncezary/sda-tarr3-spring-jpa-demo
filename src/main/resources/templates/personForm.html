@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+    <form action="#" method="post" id="person-form">
+        <input type="number" readonly name="id" value="1" form="person-form"><br>
+        <label for="name">Imię i nazwisko</label><br>
+        <input type="text" name="name" id="name" placeholder="Wpisz imię i nazwisko" form="person-form"><br>
+        <label for="email">Adres mailowy</label><br>
+        <input type="email" name="email" id="email" form="person-form"/><br>
+        <label for="phone">Numer telefonu komórkowego</label><br>
+        <input type="tel" name="phone" id="phone" form="person-form"/><br>
+        <input type="date"/><br>
+        <select name="color">
+            <option value="RED">
+                Czerwony
+            </option>
+            <option value="BLACK">
+                Czarny
+            </option>
+            <option value="PINK">
+                Różowy
+            </option>
+        </select>
+        <select name="Języki" multiple>
+            <option>
+                Angielski
+            </option>
+            <option>
+                Hiszpański
+            </option>
+            <option>
+                Niemiecki
+            </option>
+
+        </select>
+        <button type="submit" form="person-form">Zapisz osobę</button><br>
+    </form>
+    <button type="reset" form="person-form">Zresetuj formularz</button>
+</body>
+</html>
