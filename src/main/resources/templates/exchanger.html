@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Quantico&display=swap" rel="stylesheet">
+    <script src="exchanger.js"></script>
+</head>
+<body onload="init()">
+<div class="container">
+    <div>
+        <div class="jumbotron">
+            <h1 class="display-4">Kalkulator walut</h1>
+            <p class="lead">Kalkulator wykorzystujący API Narodowego Banku Polskiego.</p>
+            <hr class="my-4">
+            <p></p>
+        </div>
+    </div>
+    <div>
+        <form>
+            <input class="form-control" type="number" id="source-amount" />
+            <br>
+            <select class="form-control" id="source-currency">
+            </select>
+            <br>
+            <input class="form-control" readonly type="text" id="target-amount"/>
+            <br>
+            <select class="form-control" id="target-currency">
+            </select>
+        </form>
+    </div>
+</div>
+</body>
+</html>
