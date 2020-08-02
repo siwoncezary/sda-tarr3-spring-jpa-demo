@@ -33,7 +33,30 @@ public class PersonServiceJpa implements PersonService{
     }
 
     @Override
+    @Transactional
+    public boolean updateName(long id, String name) {
+        return personRepository.findById(id).flatMap(person ->{
+            person.setName(name);
+            return Optional.of(true);
+        }).orElse(false);
+    }
+
+    @Override
+    @Transactional
+    public boolean updateEmail(long id, String email) {
+        return personRepository.findById(id).flatMap(person ->{
+            person.setEmail(email);
+            return Optional.of(true);
+        }).orElse(false);
+    }
+
+    @Override
     public Stream<Person> findAll() {
         return personRepository.findAll().stream();
+    }
+
+    @Override
+    public Optional<Person> findById(long id) {
+        return personRepository.findById(id);
     }
 }

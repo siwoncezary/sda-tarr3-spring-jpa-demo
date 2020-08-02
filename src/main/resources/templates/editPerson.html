@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="/person/edit" th:object="${person}">
+    <input type="hidden" name="id" th:field="*{id}">
+    <input type="text" name="name" th:field="*{name}"/>
+    <br>
+    <input type="email" name="email" th:field="*{email}">
+    <br>
+    <input type="text" name="phone" th:field="*{phone}">
+    <br>
+    <input type="submit" value="Zapisz"/>
+</form>
+</body>
+</html>

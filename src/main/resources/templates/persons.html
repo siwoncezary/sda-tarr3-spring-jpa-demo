@@ -5,11 +5,13 @@
     <title>Title</title>
 </head>
 <body>
+<a th:href="@{/person/create}">Dodaj osobę</a>
 <h1>Lista osób:</h1>
 <ul>
     <li th:each="person: ${persons}">
         Nazwa: <span th:text="${person.name}"></span>,
         telefon: <span th:text="${person.phone}"></span>
+        <a th:href="@{/person/edit/{id} (id = ${person.id})}">Edytuj</a>
     </li>
 </ul>
 </body>
