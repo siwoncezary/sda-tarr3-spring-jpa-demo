@@ -20,16 +20,20 @@
     </div>
     <div>
         <form>
-            <input class="form-control" type="number" id="source-amount" />
+            <input class="form-control" type="number" id="source-amount" onchange="calculate()"/>
             <br>
-            <select class="form-control" id="source-currency">
+            <select class="form-control" id="source-currency" onchange="calculate()">
             </select>
             <br>
             <input class="form-control" readonly type="text" id="target-amount"/>
             <br>
-            <select class="form-control" id="target-currency">
+            <select class="form-control" id="target-currency" onchange="calculate()">
             </select>
         </form>
+        <div>
+            <br>
+            <p>Tabela kursów z dnia: <strong><span id="table-date"></span></strong></p>
+        </div>
     </div>
 </div>
 </body>
