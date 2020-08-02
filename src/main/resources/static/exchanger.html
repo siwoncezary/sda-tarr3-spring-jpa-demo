@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Quantico&display=swap" rel="stylesheet">
+    <script src="exchanger.js"></script>
+    <title>Exchanger</title>
+    <style>
+        .display{
+            font-family: 'Quantico', sans-serif;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body onload="init()">
+<div class="container mt-4">
+    <div class="jumbotron">
+        <h1 class="display-4">Kalkulator walut</h1>
+        <p class="lead">Kalkulator walut oparty na NBP API. Przeglądarka wymaga wyłączenia CORS np. przy pomocy wtyczki CORS Unblock.</p>
+        <hr class="my-4">
+        <p class="text-danger">Używać tylko w wyjątkowych sytuacjach!!! Pamiętaj o ponownym włączeniu CORS lub odinstaluj wtyczkę!!!</p>
+    </div>
+    <form>
+        <input class = "form-control display" type="number" id="source-amount" onchange="calculate()"/>
+        <br>
+        <select class="form-control" id="source-currency" onchange="calculate()">
+        </select>
+        <br>
+        <input class = "form-control display" readonly type="text" id="target-amount"/>
+        <br>
+        <select class="form-control" id="target-currency" onchange="calculate()">
+        </select>
+        <br>
+    </form>
+    <button type="button" onclick="getJson()">Download</button>
+    <footer>
+        <div class="container p-4 bg-light" style="height: 300px">
+            <p class="text-center text-primary" id="info">
+            </p>
+            <p class="text-center"><small> Powered by </small><br><br>
+                <img src="https://sdacademy.pl/vs-assets/uploads/2019/06/cropped-Logo_SDA_color-3-1.png" alt="Szkoła programowania Software Development Academy">
+            </p>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

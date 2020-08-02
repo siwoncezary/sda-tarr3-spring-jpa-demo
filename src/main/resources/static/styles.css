@@ -1,0 +1,56 @@
+body{
+    color: darkslategray;
+    width: 60%;
+    margin: 20px auto;
+    font-family: 'Lato', sans-serif;
+}
+h2 {
+    font-family: 'Lato Light', sans-serif;
+}
+table{
+    border: brown 1px solid;
+    width: 100%;
+}
+td{
+    text-align: center;
+}
+tfoot{
+    background-color: orange;
+}
+
+tbody :nth-child(od){
+    background-color: azure;
+}
+tbody :nth-child(even){
+    background-color: lavenderblush;
+}
+
+a{
+    text-decoration: none;
+}
+a:active{
+    color: #BBAACC;
+}
+a:hover {
+    color: orange;
+    background-color: antiquewhite;
+}
+
+h1{
+    font-size: 1.2rem;
+}
+
+h2{
+    font-size: 1rem;
+}
+
+h1::first-letter{
+    font-size: larger;
+}
+
+.bordered {
+    border: orange 2px solid;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}

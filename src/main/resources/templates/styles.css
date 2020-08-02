@@ -3,6 +3,13 @@ body{
     width: 60%;
     margin: 20px auto;
     font-family: 'Lato', sans-serif;
+    font-size: 24px;
+}
+p{
+    font-size: 0.8rem;
+}
+ul{
+    font-size: 0.8rem;
 }
 h2 {
     font-family: 'Lato Light', sans-serif;
@@ -44,15 +51,77 @@ h2{
     font-size: 1rem;
 }
 
-
-
 h1::first-letter{
     font-size: larger;
 }
 
 .bordered {
-    border: orange 2px solid;
-    padding: 10px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    border: orange 10px solid;
+}
+
+.square{
+    width: 100px;
+    height: 100px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.content-model{
+    box-sizing: content-box;
+}
+
+.border-model{
+    box-sizing: border-box;
+}
+
+.h-center{
+    margin: 0px auto;
+}
+
+.square-caption {
+    display: block;
+    position: relative;
+    top: 100px;
+}
+
+.absolute-caption{
+    display: block;
+    position: absolute;
+    top:100px;
+}
+
+.positioned{
+    position: fixed;
+    top:200px;
+    left: 0px;
+}
+
+.circle{
+    display: block;
+    background-color: blue;
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+}
+
+.my-box{
+    display: block;
+    background-color: aqua;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 200px;
+    height: 50px;
+}
+
+@media screen and (max-width: 480px){
+    body{
+        background-color: chartreuse;
+    }
+}
+
+@media screen and (min-width: 480px){
+    body{
+        background-color: aqua;
+    }
 }

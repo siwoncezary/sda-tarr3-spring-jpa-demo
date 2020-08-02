@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <a class="navbar-brand" href="#">SDA</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="personForm.html">Formularz</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Strona z dnia 1</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="javaScriptDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    JavaScript
+                </a>
+                <div class="dropdown-menu" aria-labelledby="javaScriptDropdown">
+                    <a class="dropdown-item" href="#">Zmienne</a>
+                    <a class="dropdown-item" href="#">Instrukcje</a>
+                    <a class="dropdown-item" href="#">Tablica</a>
+                    <a class="dropdown-item" href="#">Łańcuchy</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Funkcja po zalogowaniu</a>
+            </li>
+        </ul>
+
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Wyszukaj</button>
+        </form>
+    </div>
+</nav>
+
+
+<div class="container">
+    <h1>Przykładowa strona w Bootstrap!</h1>
+    <div class="row">
+        <div class="col-sm">
+            <h2>Deklaracje</h2>
+            <p>
+                Deklaracja zmiennej:
+                <ul>
+            <li>
+                <code>var zmienna = wartość;</code>
+            </li>
+            <li>
+                <code>let zmienna = wartość;</code>
+            </li>
+            <li> <code>const zmienna = wartość;</code></li>
+        </ul>
+            </p>
+            <p>Wartość zmiennej: <span id="count"><span></p>
+            <script>
+                var count = 10;
+                let counter = 5;
+                const string = "Hello World";
+                console.log("Wartość zmiennej count: " + count);
+                document.getElementById("count").innerText = count;
+                counter = counter + " razy";
+                console.log(counter);
+            </script>
+        </div>
+        <div class="col-sm">
+            <h2>Operator porównania</h2>
+            <p>Porównanie tylko wartości</p>
+            <p>
+            <code>console.log(count == '10');</code><br>
+            <samp>true</samp>
+            </p>
+            <script>
+                console.log(count == '10');
+            </script>
+            <p>Porównanie wartości i typu</p>
+            <code>console.log(count === '10')</code><br>
+            <samp>false</samp>
+            <script>
+                console.log(count === '10');
+                console.log(count**2);
+            </script>
+        </div>
+    </div>
+    <div class=""row>
+        <div claas = "col">
+            <h2>Funkcje</h2>
+            <code>
+            <pre>
+
+
+                    function add(a, b){
+                        return a + b;
+                    }
+
+                    let addition = function(a, b){
+                        return a + b;
+                    }
+
+                    let addTwoNumbers = (a, b) => a + b;
+
+                    console.log(add(5, 6));
+                    console.log(addition(5, 6));
+                    console.log(addTwoNumbers(5, 6));
+
+                    addition = (a, b) => a * b;
+
+                    console.log(addition(5,6));
+
+            </pre>
+            </code>
+            <script>
+                function add(a, b){
+                    return a + b;
+                }
+
+                let addition = function(a, b){
+                    return a + b;
+                }
+
+                let addTwoNumbers = (a, b) => a + b;
+
+                console.log(add(5, 6));
+                console.log(addition(5, 6));
+                console.log(addTwoNumbers(5, 6));
+
+                addition = (a, b) => a * b;
+
+                console.log(addition(5,6));
+            </script>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <h2>Obiekty</h2>
+            <pre>
+                <code>
+                   let object = {
+                    color: "black",
+                    size: "10px",
+                    changeColor: function(color) {
+                        this.color = color;
+                    }
+                };
+                console.log(object);
+                console.log(object.color);
+                console.log(object.size);
+                class Rectagle{
+                    constructor(x, y, w, h) {
+                        this.x = x;
+                        this.y = y;
+                        this.witdh = w;
+                        this.height = h;
+                    }
+
+                    changePosition(x, y){
+                        this.x = x;
+                        this.y = y;
+                    }
+                }
+                let rect = new Rectagle(10, 10, 40, 50);
+                console.log(rect);
+                </code>
+            </pre>
+            <script>
+                let object = {
+                    color: "black",
+                    size: "10px",
+                    changeColor: function(color) {
+                        this.color = color;
+                    }
+                };
+                console.log(object);
+                console.log(object.color);
+                console.log(object.size);
+                class Rectagle{
+                    constructor(x, y, w, h) {
+                        this.x = x;
+                        this.y = y;
+                        this.witdh = w;
+                        this.height = h;
+                    }
+
+                    changePosition(x, y){
+                        this.x = x;
+                        this.y = y;
+                    }
+                }
+                let rect = new Rectagle(10, 10, 40, 50);
+                console.log(rect);
+            </script>
+        </div>
+        <div class="col-8">
+            <h2>Tablice</h2>
+            <pre>
+                <code>
+                let arr = [];
+                let colors = ["black", "white","red"];
+                colors.unshift("pink"); // dodaje na początku tablicy
+                colors.push("green"); //dodaje na koniec tablicy
+
+                for(let i = 0; i < colors.length; i++){
+                    console.log(colors[i]);
+                }
+                colors.shift(); //usuwamy pierwszy element z tablicy
+                colors.pop(); //usuwa ostatni element z tablicy
+                for(item in colors){
+                    console.log(colors[item]);
+                }
+
+                colors.forEach(item => console.log(item));
+                arr.push(2, 4, 5 ,6, 2, 7 ,5 ,3);
+                let filteredArr = arr.filter(item => item != 2);
+                console.log(filteredArr);
+                console.log(filteredArr.join(", "));
+                </code>
+            </pre>
+            <script>
+                let arr = [];
+                let colors = ["black", "white","red"];
+                colors.unshift("pink"); // dodaje na początku tablicy
+                colors.push("green"); //dodaje na koniec tablicy
+
+                for(let i = 0; i < colors.length; i++){
+                    console.log(colors[i]);
+                }
+                colors.shift(); //usuwamy pierwszy element z tablicy
+                colors.pop(); //usuwa ostatni element z tablicy
+                for(item in colors){
+                    console.log(colors[item]);
+                }
+
+                colors.forEach(item => console.log(item));
+                arr.push(2, 4, 5 ,6, 2, 7 ,5 ,3);
+                let filteredArr = arr.filter(item => item != 2);
+                console.log(filteredArr);
+                console.log(filteredArr.join(", "));
+
+            </script>
+        </div>
+        <div class="row">
+            <h2>Lańcuchy</h2>
+            <pre>
+                <code>
+                    let text = "ABCDEF";
+                    console.log(text.charCodeAt(0));
+                    console.log("a".charCodeAt(0));
+                    for(let i = 0; i < text.length; i++){
+                        console.log(text.charCodeAt(i) + 32);
+                    }
+                    console.log(result);
+                </code>
+            </pre>
+            <script>
+                let text = "ABCDEF";
+                console.log(text.charCodeAt(0));
+                console.log("a".charCodeAt(0));
+                for(let i = 0; i < text.length; i++){
+                    console.log(text.charCodeAt(i) + 32);
+                }
+                console.log(result);
+            </script>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>

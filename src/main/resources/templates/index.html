@@ -1,8 +1,8 @@
-<html lang="pl">
+<html lang="pl" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Nauka HTML</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css"  th:href="@{/styles.css}">
     <meta name="description" content="Strona stworzona podczas nauki HTML, CSS i JavaScript w SDA kusrs Java">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,900;1,400&display=swap"
           rel="stylesheet">
@@ -99,6 +99,20 @@
     <p>Skrót wywołujący podpowiedzi w IntelliJ:
         <kbn>CTRL+SPACJA</kbn>
     </p>
+</article>
+<article>
+    <h2>Display, box model</h2>
+    <div class="square content-model h-center positioned">
+        Wnętrze div'a alkfh fjkhs kdjfhs fjhslhaskdjf halkjfhskdjh fh skjfgsjhgf sjhf gsjhgf jshf:<span class="absolute-caption">Podpis</span>
+    </div>
+
+    <div class="square bordered border-model h-center">
+        <p>Wnętrze div'a: <span class="square-caption">Przykładowy tekst</span></p>
+    </div>
+    <div class="circle">
+
+    </div>
+    <div class="my-box"></div>
 </article>
 <footer>
     <i class="fab fa-github-square"></i>
